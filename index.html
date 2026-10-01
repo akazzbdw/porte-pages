@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Porte — essai</title>
+<link rel="stylesheet" href="essai.css">
+</head>
+<body>
+<h1>Porte — page d'essai</h1>
+<p>Cette page sert une seule fois : capturer ce qu'un iPhone envoie quand il crée une clé et quand il signe. La clé créée ici est une clé d'essai, qui ne peut rien valider d'autre. Rien n'est envoyé nulle part : tout s'affiche ci-dessous.</p>
+
+<p id="etat">Vérification du navigateur…</p>
+
+<h2>1. Créer la clé d'essai</h2>
+<p>À faire une seule fois, dans Safari.</p>
+<button id="creer" type="button">Créer la clé d'essai</button>
+
+<h2>2. Signer</h2>
+<p>Dans Safari, puis dans Telegram.</p>
+<button id="signer" type="button">Signer avec Face ID</button>
+
+<h2>Résultat</h2>
+<p id="message"></p>
+<textarea id="sortie" readonly rows="12"></textarea>
+<button id="copier" type="button">Copier le résultat</button>
+<script src="essai.js"></script>
+</body>
+</html>
