@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src https://porte.labo.bluedigitalworks.com; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Porte — enregistrement</title>
+<link rel="stylesheet" href="porte.css">
+</head>
+<body>
+<main class="cadre">
+  <header class="tete"><img src="monogramme-bdw.svg" alt="Blue Digital Works" width="40" height="40"><span class="marque">Porte · enregistrement</span></header>
+  <p class="consigne" id="consigne">Touche le bouton : ton iPhone demande Face ID et crée la clé de la porte.</p>
+  <button id="enregistrer" type="button" class="principal">Enregistrer ma clé</button>
+  <section class="cellule grise" id="cellule" hidden><p class="label" id="label">Tape au Terminal ces 16 signes, en entier :</p><p class="valeur empreinte" id="empreinte"></p></section>
+  <p class="message" id="message" role="status" aria-live="polite"></p>
+</main>
+<script src="commun.js"></script>
+<script src="enregistrement.js"></script>
+</body>
+</html>

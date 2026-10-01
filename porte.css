@@ -1,0 +1,31 @@
+/* La porte, aux couleurs de la charte (00-Systeme/Referentiels/charte-ui.md) : 5 valeurs monochromes, Geist et
+   JetBrains Mono servies depuis ce dossier (aucune ressource externe), radius 0 ou 2 px, aucune ombre. */
+@font-face { font-family: "Geist"; src: url("Geist-Regular.woff2") format("woff2"); font-weight: 400; font-display: block; }
+@font-face { font-family: "Geist"; src: url("Geist-SemiBold.woff2") format("woff2"); font-weight: 600; font-display: block; }
+@font-face { font-family: "JetBrains Mono"; src: url("JetBrainsMono-Medium.woff2") format("woff2"); font-weight: 500; font-display: block; }
+
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+html, body { margin: 0; background: #FFFFFF; color: #000000; }
+body { font: 400 17px/1.5 "Geist", system-ui, sans-serif; -webkit-text-size-adjust: 100%; }
+.cadre { max-width: 480px; margin: 0 auto; padding: 24px 24px 40px; display: flex; flex-direction: column; gap: 16px; }
+.tete { display: flex; align-items: center; gap: 16px; padding-bottom: 8px; }
+.tete img { width: 40px; height: 40px; display: block; }
+.marque { font: 500 12px/1 "JetBrains Mono", ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; }
+.cellule { border: 1px solid #B4B4B4; border-radius: 2px; padding: 20px; }
+.cellule.grise { border-color: #F4F4F4; background: #F4F4F4; }
+.label { margin: 0 0 8px; font: 500 11px/1.2 "JetBrains Mono", ui-monospace, monospace; letter-spacing: .1em;
+         text-transform: uppercase; color: #6E6E6E; }
+.valeur { margin: 0; font: 500 44px/1.1 "JetBrains Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums;
+          overflow-wrap: anywhere; }
+.valeur.empreinte { font-size: 30px; letter-spacing: .04em; }
+.consigne, .message { margin: 0; white-space: pre-line; }
+.message { color: #000000; min-height: 24px; }
+.principal { width: 100%; min-height: 56px; padding: 16px; border: 1px solid #000000; border-radius: 2px;
+             background: #000000; color: #FFFFFF; font: 600 18px/1.2 "Geist", system-ui, sans-serif; cursor: pointer;
+             transition: background-color 150ms, color 150ms; }
+.principal:active { background: #FFFFFF; color: #000000; }
+.principal:disabled { background: #F4F4F4; color: #6E6E6E; border-color: #B4B4B4; cursor: default; }
+.principal:focus-visible { outline: 2px solid #000000; outline-offset: 2px; }
+[hidden] { display: none !important; }
+@media (prefers-reduced-motion: reduce) { .principal { transition: none; } }
